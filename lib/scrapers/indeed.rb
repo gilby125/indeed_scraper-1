@@ -2,7 +2,7 @@ require 'wombat'
 require 'httpclient'
 require 'uri'
 
-class Indeed
+class Scrapers::Indeed
   def scrape pages=10
     jobs = (pages.times.collect do |page_no|
       limit = (page_no-1)*20
