@@ -46,3 +46,4 @@ end
 
 gem 'wombat'
 gem 'httpclient'
+gem 'nobrainer'
