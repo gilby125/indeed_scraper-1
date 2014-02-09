@@ -3,12 +3,20 @@ require 'httpclient'
 require 'uri'
 
 class Scrapers::Indeed
+  def initialize country_code='ca'
+    @country_code=country_code
+  end
+
+  def host
+    "http://www.indeed.#{@country_code}"
+  end
+
   def scrape pages=10
     jobs = (pages.times.collect do |page_no|
       limit = (page_no-1)*20
 
       page_results = Wombat.crawl do
-        base_url 'http://www.indeed.ca'
+        base_url host
         path "/jobs?q=ruby&start=#{limit}"
 
         jobs 'css=#resultsCol>.row', :iterator do
