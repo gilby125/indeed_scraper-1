@@ -9,4 +9,5 @@ class JobPost
   field :summary
   field :days_ago
   field :source
+  field :country_code
 end
