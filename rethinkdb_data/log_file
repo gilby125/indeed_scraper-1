@@ -1,0 +1,12 @@
+2014-02-21T16:33:22.184504000 0.193961s info: Creating directory /Users/yasith/source/indeed_scraper/rethinkdb_data
+2014-02-21T16:33:22.187335000 0.196792s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/yasith/source/indeed_scraper/rethinkdb_data' did not already exist.)
+2014-02-21T16:33:22.187445000 0.196901s info: Running rethinkdb 1.11.3 (CLANG 4.2 (clang-425.0.28))...
+2014-02-21T16:33:22.192875000 0.202332s info: Running on Darwin 12.5.0 x86_64
+2014-02-21T16:33:22.192924000 0.202381s info: Loading data from directory /Users/yasith/source/indeed_scraper/rethinkdb_data
+2014-02-21T16:33:22.382182000 0.391639s info: Listening for intracluster connections on port 29015
+2014-02-21T16:33:22.384091000 0.393548s info: Listening for client driver connections on port 28015
+2014-02-21T16:33:22.384108000 0.393565s info: Listening for administrative HTTP connections on port 8080
+2014-02-21T16:33:22.384110000 0.393566s info: Listening on addresses: 127.0.0.1, ::1
+2014-02-21T16:33:22.384110000 0.393567s info: To fully expose RethinkDB on the network, bind to all addresses
+2014-02-21T16:33:22.384111000 0.393568s info: by running rethinkdb with the `--bind all` command line option.
+2014-02-21T16:33:22.384112000 0.393569s info: Server ready
