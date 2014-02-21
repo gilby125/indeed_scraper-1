@@ -44,6 +44,9 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'wombat'
+gem 'wombat', github: "felipecsl/wombat"
 gem 'httpclient'
 gem 'nobrainer'
+
+gem 'pry-rails'
+gem 'awesome_print'
