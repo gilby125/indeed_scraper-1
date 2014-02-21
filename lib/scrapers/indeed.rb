@@ -35,7 +35,7 @@ class Scrapers::Indeed
 
     jobs.each do |job|
       #job['link'] = get_final_uri("http://www.indeed.ca/#{job['link']}")
-      job['link'] = "http://www.indeed.ca#{job['link']}"
+      job['link'] = "http://www.indeed.#{@country_code}#{job['link']}"
       job['days_ago'] = job['days_ago'].gsub(/ days ago/, '')
       job['job_id'] = job['link'].gsub('http://www.indeed.ca/rc/clk?jk=', '')
     end
