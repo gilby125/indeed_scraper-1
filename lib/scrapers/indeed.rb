@@ -11,13 +11,15 @@ class Scrapers::Indeed
     "http://www.indeed.#{@country_code}"
   end
 
-  def scrape pages=10
+  def scrape query='ruby', pages=10
     jobs = (pages.times.collect do |page_no|
-      limit = (page_no-1)*20
+      country_code = @country_code
+      limit = (page_no)*20
+      base_url_val = host 
 
       page_results = Wombat.crawl do
-        base_url host
-        path "/jobs?q=ruby&start=#{limit}"
+        base_url(base_url_val)
+        path "/jobs?q=#{query}&start=#{limit}"
 
         jobs 'css=#resultsCol>.row', :iterator do
           title 'css=h2>a'
@@ -27,6 +29,7 @@ class Scrapers::Indeed
           summary 'css=.summary'
           days_ago 'css=.date'
           source 'css=.sdn'
+          country_code country_code
         end
       end
 
