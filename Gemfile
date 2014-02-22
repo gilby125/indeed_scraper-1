@@ -50,3 +50,4 @@ gem 'nobrainer'
 
 gem 'pry-rails'
 gem 'awesome_print'
+gem 'bootstrap-sass'
