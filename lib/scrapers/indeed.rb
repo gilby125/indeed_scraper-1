@@ -23,7 +23,7 @@ class Scrapers::Indeed
 
         jobs 'css=#resultsCol>.row', :iterator do
           title 'css=h2>a'
-          link 'xpath=string(//h2/a/@href)'
+          link 'css=h2>a @href'
           company 'css=.company'
           location 'css=.location'
           summary 'css=.summary'
