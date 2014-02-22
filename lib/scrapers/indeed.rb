@@ -23,6 +23,7 @@ class Scrapers::Indeed
 
         jobs 'css=#resultsCol>.row', :iterator do
           title 'css=h2>a'
+          job_id 'css=h2 @id'
           link 'css=h2>a @href'
           company 'css=.company'
           location 'css=.location'
@@ -40,7 +41,7 @@ class Scrapers::Indeed
       #job['link'] = get_final_uri("http://www.indeed.ca/#{job['link']}")
       job['link'] = "http://www.indeed.#{@country_code}#{job['link']}"
       job['days_ago'] = job['days_ago'].gsub(/ days ago/, '')
-      job['job_id'] = job['link'].gsub('http://www.indeed.ca/rc/clk?jk=', '')
+      #job['job_id'] = job['link'].gsub('http://www.indeed.ca/rc/clk?jk=', '')
     end
   end
 
